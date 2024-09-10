@@ -1,0 +1,10 @@
+# train and val data
+train: /content/drive/MyDrive/YOLO_new/datanew/images/train/
+val: /content/drive/MyDrive/YOLO_new/datanew/images/val/
+test: /content/drive/MyDrive/YOLO_new/datanew/images/test/
+
+# number of classes
+nc: 1
+
+# class names
+names: ['mcell']
