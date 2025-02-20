@@ -6,7 +6,8 @@ pytorch-lightning = 0.9.1
 PyTorch = 2.6.0
 
 Dataset:
-Custom Dataset = (Dataset Description)
+Custom Dataset = The dataset comprises 3238 images, with 1811 classified as benign and 1427 as malignant. Approximately 1500 cells from 150
+JPEG images sized 1600x1400 were labeled.
 
 Self-Supervised Pretraining:
 To perform self-supervised pretraining, follow the steps provided in the ‘EnBCDet_Self_Supervised_Pretraining_Github_Copy.ipynb’ file in ‘Self Sup’ folder.
