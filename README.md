@@ -22,6 +22,27 @@ onnx
 onnxruntime
 thop
 
+| Package | Purpose |
+|---------|---------|
+| **pytorch-lightning = 0.9.1** | High-level wrapper for PyTorch to simplify training. |
+| **Pytorch >= 1.7.0** | PyTorch framework for deep learning. |
+| **torchvision >= 0.8.1** | Image processing library that includes pre-trained models, datasets, and utilities. |
+| **numpy** | Scientific computing (arrays, mathematical functions). |
+| **opencv-python** | Computer vision library for image and video processing. |
+| **matplotlib** | General-purpose plotting library. |
+| **pandas** | Data analysis and manipulation (handling tables, CSVs). |
+| **seaborn** | Statistical data visualization. |
+| **scipy** | Scientific computing (optimization, signal processing, etc.). |
+| **PyYAML >= 5.3** | Parses YAML files (used for model configs). |
+| **tqdm** | Displays progress bars for loops (useful for training logs). |
+| **requests** | HTTP requests for downloading models, APIs, etc. |
+| **tensorboard** | Logs training metrics and visualizes performance. |
+| **albumentations >= 0.4.6** | Image augmentation library for deep learning. |
+| **onnx** | Open Neural Network Exchange format (for exporting models). |
+| **onnxruntime** | Runtime for running ONNX models efficiently. |
+| **thop** | Computes FLOPs and parameter count for a model (helps with optimization). |
+
+
 # Dataset:
 Custom Dataset = The dataset comprises 3238 images, with 1811 classified as benign and 1427 as malignant. Approximately 1500 cells from 150
 JPEG images sized 1600x1400 were labeled.
