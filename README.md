@@ -51,7 +51,7 @@ For webcam inference:
 python detect.py --source 0 --weights yolov5s.pt --conf 0.25
 
 # Training a Custom Model
-To train YOLOv5 on a custom dataset:
+To train on a custom dataset:
 
 Prepare the dataset in the YOLO format (images, labels, train.txt, val.txt).
 Modify the dataset YAML file (data/custom.yaml):
@@ -63,7 +63,12 @@ nc: 2  # Number of classes
 names: ['class1', 'class2']
 
 # Train the model
-python train.py --img 640 --batch 16 --epochs 50 --data data/custom.yaml --weights yolov5s.pt --device 0
+python train.py --img 640 --batch 16 --epochs 50 --data data/custom.yaml --self_supervised_weights weightfile.pt --device 0
+
+# Key Considerations 
+✅ Backbone Compatibility: If your self-supervised model uses a different backbone than YOLO’s, modify YOLO’s model.yaml to match.
+✅ Transfer Learning: Fine-tune the model by freezing the backbone initially and unfreezing later for full training. 
+
 
 # Exporting the Model
 Converting to ther formats
