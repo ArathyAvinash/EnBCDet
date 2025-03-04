@@ -66,7 +66,7 @@ names: ['class1', 'class2']
 python train.py --img 640 --batch 16 --epochs 50 --data data/custom.yaml --self_supervised_weights weightfile.pt --device 0
 
 # Key Considerations 
-✅ Backbone Compatibility: If your self-supervised model uses a different backbone than YOLO’s, modify YOLO’s model.yaml to match.
+✅ Backbone Compatibility: If your self-supervised model uses a different backbone than YOLO’s, modify YOLO’s model.yaml to match.\
 ✅ Transfer Learning: Fine-tune the model by freezing the backbone initially and unfreezing later for full training. 
 
 
