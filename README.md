@@ -11,6 +11,10 @@ PyTorch = 2.6.0
 Custom Dataset = The dataset comprises 3238 images, with 1811 classified as benign and 1427 as malignant. Approximately 1500 cells from 150
 JPEG images sized 1600x1400 were labeled.
 
+# Installing Dependencies
+!pip install -r requirements.txt
+!!!!!!!!!!! Ensure you have Python 3.8+ and torch installed. If using CUDA, install torch with GPU support:!!!!!!!!!!
+
 # Self-Supervised Pretraining:
 To perform self-supervised pretraining, follow the steps provided in the ‘EnBCDet_Self_Supervised_Pretraining_Github_Copy.ipynb’ file in ‘Self Sup’ folder.
 
@@ -19,6 +23,46 @@ To perform training and malignant cell detection from urine cytology samples, fo
 
 # Explainability of Sel-Supervised Pretraining:
 To get the CAM explanations of the self-supervised encoder, follow the ‘EnBCDet_encoder_heatmap_try.ipynb’ file in ‘XAI’ folder.
+
+# Inference on Images/Videos 
+python detect.py --source your_image.jpg --weights yolov5s.pt --conf 0.25
+
+For webcam inference:
+python detect.py --source 0 --weights yolov5s.pt --conf 0.25
+
+# Training a Custom Model
+To train YOLOv5 on a custom dataset:
+
+Prepare the dataset in the YOLO format (images, labels, train.txt, val.txt).
+Modify the dataset YAML file (data/custom.yaml):
+
+yaml file:
+train: path/to/train/images
+val: path/to/val/images
+nc: 2  # Number of classes
+names: ['class1', 'class2']
+
+# Train the model
+python train.py --img 640 --batch 16 --epochs 50 --data data/custom.yaml --weights yolov5s.pt --device 0
+
+# Exporting the Model
+Converting to ther formats
+Formats supported: ONNX, TensorRT, CoreML, OpenVINO, TF SavedModel, TFLite
+python export.py --weights yolov5s.pt --include onnx
+
+# Customization
+Adjust Confidence and IoU Thresholds
+python detect.py --weights yolov5s.pt --source data/images/ --conf 0.5 --iou-thres 0.45
+
+# Resources
+Ultralytics Documentation
+
+# Troubleshooting
+CUDA not detected? Run python -c "import torch; print(torch.cuda.is_available())"
+No detections? Increase --conf or check dataset labels.
+
+License
+his project is under the GPL-3.0 License.
 
 # Citation:
 @article{Menon2025,
