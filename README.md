@@ -34,6 +34,12 @@ JPEG images sized 1600x1400 were labeled.
 The data supporting the conclusions of this research are available from the corresponding author upon reasonable request.
 </p>
 
+<h3>Custom Dataset</h3>
+<ul>
+  <li>The dataset comprises <b>3,238 images</b>, with <b>1,811 classified as benign</b> and <b>1,427 as malignant</b>.</li>
+  <li>Approximately <b>1,500 cells</b> from <b>150 JPEG images</b> (sized <b>1600×1400</b>) were labeled.</li>
+</ul>
+
 # Self-Supervised Pretraining:
 To perform self-supervised pretraining, follow the steps provided in the ‘EnBCDet_Self_Supervised_Pretraining_Github_Copy.ipynb’ file in ‘Self Sup’ folder.
 
