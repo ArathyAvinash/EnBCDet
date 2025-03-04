@@ -11,10 +11,6 @@ PyTorch = 2.6.0
 Custom Dataset = The dataset comprises 3238 images, with 1811 classified as benign and 1427 as malignant. Approximately 1500 cells from 150
 JPEG images sized 1600x1400 were labeled.
 
-# Installing Dependencies
-!pip install -r requirements.txt
-!!!!!!!!!!! Ensure you have Python 3.8+ and torch installed. If using CUDA, install torch with GPU support:!!!!!!!!!!
-
 # Self-Supervised Pretraining:
 To perform self-supervised pretraining, follow the steps provided in the ‘EnBCDet_Self_Supervised_Pretraining_Github_Copy.ipynb’ file in ‘Self Sup’ folder.
 
@@ -23,6 +19,11 @@ To perform training and malignant cell detection from urine cytology samples, fo
 
 # Explainability of Sel-Supervised Pretraining:
 To get the CAM explanations of the self-supervised encoder, follow the ‘EnBCDet_encoder_heatmap_try.ipynb’ file in ‘XAI’ folder.
+
+# Installing Dependencies
+!pip install -r requirements.txt
+Guarantees that all required libraries and their specific versions are installed, so that the code runs correctly without missing dependencies.
+!!!!!!!!!!! Ensure you have Python 3.8+ and torch installed. If using CUDA, install torch with GPU support:!!!!!!!!!!
 
 # Inference on Images/Videos 
 python detect.py --source your_image.jpg --weights yolov5s.pt --conf 0.25
@@ -61,8 +62,6 @@ Ultralytics Documentation
 CUDA not detected? Run python -c "import torch; print(torch.cuda.is_available())"
 No detections? Increase --conf or check dataset labels.
 
-License
-his project is under the GPL-3.0 License.
 
 # Citation:
 @article{Menon2025,
