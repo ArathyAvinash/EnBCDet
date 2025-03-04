@@ -5,7 +5,22 @@ The primary objective of the study is to introduce a novel object detection mode
 
 # Dependencies: 
 pytorch-lightning = 0.9.1
-PyTorch = 2.6.0
+Pytorch>=1.7.0
+torchvision>=0.8.1
+numpy
+opencv-python
+matplotlib
+pandas
+seaborn
+scipy
+PyYAML>=5.3
+tqdm
+requests
+tensorboard
+albumentations>=0.4.6
+onnx
+onnxruntime
+thop
 
 # Dataset:
 Custom Dataset = The dataset comprises 3238 images, with 1811 classified as benign and 1427 as malignant. Approximately 1500 cells from 150
