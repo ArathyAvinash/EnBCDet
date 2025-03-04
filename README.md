@@ -27,8 +27,10 @@ The primary objective of the study is to introduce a novel object detection mode
 
 
 # Dataset:
+The study utilizes data ethically approved by the Post Graduate Institute of Medical Education and Research, Chandigarh, India.
 Custom Dataset = The dataset comprises 3238 images, with 1811 classified as benign and 1427 as malignant. Approximately 1500 cells from 150
 JPEG images sized 1600x1400 were labeled.
+The data supporting the conclusions of this research are available from the corresponding author upon reasonable request.
 
 # Self-Supervised Pretraining:
 To perform self-supervised pretraining, follow the steps provided in the ‘EnBCDet_Self_Supervised_Pretraining_Github_Copy.ipynb’ file in ‘Self Sup’ folder.
